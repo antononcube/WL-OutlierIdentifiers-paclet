@@ -56,7 +56,7 @@ SPLUSQuartileIdentifierParameters[data : {_?NumberQ...}] :=
     Block[{xL, xU},
       If[Length[data] <= 4, Return[{Min[data], Max[data]}]];
       {xL, xU} = Quantile[data, {1 / 4, 3 / 4}];
-      {xL - 1.5(xU - xL), xU + 1.5(xU - xL)}
+      {xL - 1.5 * (xU - xL), xU + 1.5 * (xU - xL)}
     ];
 
 
